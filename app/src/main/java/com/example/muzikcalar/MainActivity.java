@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (currentMusic==0){
                     currentMusic=musicList.size()-1;
                 }
-                else if (currentMusic < musicList.size() - 1) {
+                else if (currentMusic <= musicList.size() - 1) {
                     currentMusic -= 1;
                 } else {
                     currentMusic = 0;
