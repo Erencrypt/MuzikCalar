@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("MuzikCalar", "onClick: Start");
                 break;
             }
+            case R.id.ibPrew: {
+                // TODO muzik prew ozelligini ekle
+                Toast.makeText(this, "Bu ozellik yakinda gelecek!", Toast.LENGTH_SHORT).show();
+                Log.d("MuzikCalar", "onClick: Music List");
+                break;
+            }
             case R.id.ibNext: {
                 if (mediaPlayer.isPlaying()) {
                     mediaPlayer.stop();
