@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvMusicTitle = findViewById(R.id.tvMusicTitle);
         musicList = new ArrayList<>();
         getList();
-        mediaPlayer = MediaPlayer.create(this, R.raw.darkweb1);
+        mediaPlayer = MediaPlayer.create(this, R.raw.windows_remix);
         tvMusicTitle.setText(musicList.get(0));
 
         ibStart.setOnClickListener(this);
