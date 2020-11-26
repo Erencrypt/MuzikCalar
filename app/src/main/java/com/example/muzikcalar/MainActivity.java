@@ -85,8 +85,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < fields.length; i++) {
             musicList.add(fields[i].getName());
         }
-//        for (Field f: fields){
-//            musicList.add(f.getName());
-//        }
     }
 }
