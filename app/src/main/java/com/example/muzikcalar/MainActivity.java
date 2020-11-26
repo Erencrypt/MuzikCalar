@@ -53,9 +53,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             }
             case R.id.ibPrev: {
-                // TODO muzik prev ozelligini ekle
-                Toast.makeText(this,"Bu özellik yakında eklenicek",Toast.LENGTH_SHORT).show();
-                Log.d("MuzikCalar", "onClick: Music prev");
+                if (mediaPlayer.isPlaying()) {
+                    mediaPlayer.stop();
+                }
+                if (currentMusic==0){
+                    currentMusic=musicList.size()-1;
+                }
+                else if (currentMusic < musicList.size() - 1) {
+                    currentMusic -= 1;
+                } else {
+                    currentMusic = 0;
+                }
+                String uri = "android.resource://" + getPackageName() + "/raw/" + musicList.get(currentMusic);
+                mediaPlayer = MediaPlayer.create(this, Uri.parse(uri));
+                tvMusicTitle.setText(musicList.get(currentMusic));
+                mediaPlayer.start();
+                Log.d("MuzikCalar", "onClick: Next " + currentMusic);
                 break;
             }
             case R.id.ibNext: {
