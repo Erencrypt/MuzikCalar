@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton ibStart, ibPause, ibNext, ibMusicList;
+    ImageButton ibStart, ibPause, ibNext, ibMusicList, ibPrev;
     TextView tvMusicTitle;
     MediaPlayer mediaPlayer;
     ArrayList<String> musicList;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ibPrev = findViewById(R.id.ibPrev);
         ibStart = findViewById(R.id.ibStart);
         ibPause = findViewById(R.id.ibPause);
         ibNext = findViewById(R.id.ibNext);
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ibPause.setOnClickListener(this);
         ibNext.setOnClickListener(this);
         ibMusicList.setOnClickListener(this);
+        ibPrev.setOnClickListener(this);
     }
 
     @Override
@@ -50,10 +52,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("MuzikCalar", "onClick: Start");
                 break;
             }
-            case R.id.ibPrew: {
-                // TODO muzik prew ozelligini ekle
-                Toast.makeText(this, "Bu ozellik yakinda gelecek!", Toast.LENGTH_SHORT).show();
-                Log.d("MuzikCalar", "onClick: Music List");
+            case R.id.ibPrev: {
+                // TODO muzik prev ozelligini ekle
+                Toast.makeText(this,"Bu özellik yakında eklenicek",Toast.LENGTH_SHORT).show();
+                Log.d("MuzikCalar", "onClick: Music prev");
                 break;
             }
             case R.id.ibNext: {
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             case R.id.ibMusicList: {
                 // TODO muzik listesi ozelligini ekle
-                Toast.makeText(this, "Bu ozellik yakinda gelecek!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Bu özellik yakında eklenicek", Toast.LENGTH_SHORT).show();
                 Log.d("MuzikCalar", "onClick: Music List");
                 break;
             }

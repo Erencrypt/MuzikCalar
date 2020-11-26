@@ -30,7 +30,7 @@
         android:background="@color/colorPrimaryDark">
 
         <ImageButton
-            android:id="@+id/ibPrew"
+            android:id="@+id/ibPrev"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_margin="4dp"
