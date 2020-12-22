@@ -1,2 +1,2 @@
 # MuzikCalar
-Ders için yaptığımız proje.
+simple, basic and funny
